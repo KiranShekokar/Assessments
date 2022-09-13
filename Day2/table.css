@@ -1,0 +1,33 @@
+th
+{
+    background-color:darkgoldenrod;
+    color:white;
+    border-bottom: 2px solid black;
+}
+table tr:nth-child(even){
+    background-color: bisque;
+    color: balck;
+    
+}
+table tr:nth-child(odd){
+    background-color: gray;
+    color: black;
+    
+}
+tr{
+    padding:5px;
+    border-bottom: 5px solid black;
+    
+}
+table tr:hover{
+    background-color: white;
+    cursor:pointer;  
+}
+td{
+    border-bottom: 2px solid black;
+}
+table th:hover{
+    background-color: white;
+    color:black;
+    cursor:pointer;
+}
