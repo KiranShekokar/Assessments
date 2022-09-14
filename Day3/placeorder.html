@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Pizza</title>
+        <style>
+            #ph-a,#ph-l1,#ph-l2{
+                margin-left: 3px;
+            }
+            #submit{
+                background-color: orangered;
+                color:white;
+                padding:10px;
+                font-size:20px;
+                border: 0.5px solid white;
+                width:100%;
+            }
+            span{
+                color:red;
+            }
+            form{
+                float:center;
+                margin-left:25%;
+                margin-right:25%;
+            }
+            body{
+                background-color: rgba(red, green, blue, alpha);
+            }
+            select{
+                width:90%;
+            }
+        </style>
+    </head>
+    <body>
+        <h1 align="center">Welcome to ITALIAN PIZZA!</h1><hr/>
+        <form action="order.jsp" method="get"> 
+            <fieldset>
+                <legend>Order Here</legend>
+                <label>Email </label><br/><input type="text" name="email" id="email"><br/><br/>
+                <label>Phone  </label><br/>
+                <input type="number" placeholder="Area" name="ph-a" id="ph-a"><input type="number" placeholder="Local" name="ph-l1" id="ph-l1"><input type="number" placeholder="Local" name="ph-l2" id="ph-l2"><br/><br/>
+                <label>Number of Slices  </label><br/>
+                <input type="number" name="slice" id="slice"><br/><br/>
+                <label>Pizza Size  </label><br/>
+                <input type="radio" name="r1" id="r1" value="8-inch"><label>8-inch</label><input type="radio" name="r1" id="r3" value="10-inch"><label>10-inch</label><input type="radio" name="r1" id="r4" value="12-inch"><label>12-inch</label>
+                <input type="radio" name="r1" id="r1" value="14-inch"><label>14-inch</label><br/><br/>
+                <label>Topings  </label><br/>
+                <input type="checkbox" name="ck1" id="ck1" value="agree"><label>Pepperoni</label><input type="checkbox" name="ck2" id="ck2" value="agree"><label>Onions</label><input type="checkbox" name="ck3" id="ck3" value="agree"><label>Mushrooms</label><input type="checkbox" name="ck4" id="ck4" value="agree"><label>Sausage</label><br/><br/>
+                <select name="s1" id="s1">
+                    <option value="ABC">A</option>
+                    <option value="ABD">B</option>
+                    <option value="ABE">C</option>
+                    <option value="ABT">D</option>
+                </select><BR/><BR/>
+                <span>*</span><input type="checkbox" required name="ck5" id="ck5" value="true"><label>I Agree to THE TERMS AND CONDITIONS</label>
+            </fieldset>
+            <input type="submit" value="Order Now" id="submit">
+        </form>
+    </body>
+</html>

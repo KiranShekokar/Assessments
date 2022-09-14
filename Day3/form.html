@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Forms</title>
+    </head>
+    <body>
+        <h1>Welcome to Forms</h1><hr/>
+        <form action="login.jsp" method="post"> <!--to check if the values r submitting or not get can be used , please do it for checking only-->
+            <fieldset>
+                <legend>User Login</legend>
+                <label>User ID : </label><input type="text" name="user-id" id="user-id"><br/><br/>
+                <input type="text" placeholder="Enter User Name" name="user-name" id="user-name"><br/><br/>
+                <input type="password" placeholder="Enter Password" name="password" id="password"><br/><br/>
+                <input type="checkbox" name="ck1" id="ck1" value="agree"><label>Agree to terms and conditions</label><br/><br/>
+                <!-- can use true/false in the name of checkbox-->
+                <input type="submit" value="Login">
+
+            </fieldset>
+        </form>
+    </body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Co-ordinates Check</title>
+    </head>
+    <body>
+        <img   onmousemove="getCoords(event)"
+			src="images/image1.png" 
+			alt="Workplace" 
+			usemap="#workmap" 
+			width="100%" height="250"/>	
+<h1 id="x"></h1>
+ <script>
+	function   getCoords(e)
+	{
+		var obj = document.getElementById("x");
+		obj.innerText  = "X = " + e.clientX + ",  Y = " + e.clientY;
+	}	
+ </script>
+
+    </body>
+</html>
