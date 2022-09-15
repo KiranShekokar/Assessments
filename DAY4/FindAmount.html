@@ -1,0 +1,31 @@
+<!DOCTYPE html> <!-- meta tag for version -->
+<html>
+    <head>
+        <title>Find the Amount</title>
+    </head>
+    <body>
+        <div style="border:5px solid blueviolet; padding:10px;width:50%; margin-left:25%;">
+            <label>Product Name : </label><input type="text" id="name"><br/><br/>
+            <label>Unit Price : </label><input type="number" id="price"><br/><br/>
+            <label>Quantity : </label><input type="number" id="quantity"><br/><br/>
+            <input type="button" id="total" onclick="getTotal()" value="Get Amount"><input type="button" id="total" onclick="getSum()" value="Get Sum"><br/>
+           <p id="amount"></p>
+        </div>
+    <script>
+        function getSum(){
+            var price = document.getElementById("price");
+            var quantity = document.getElementById("quantity");
+            var total = parseInt(price.value) + parseInt(quantity.value);
+            var amount = document.getElementById("amount");
+            amount.innerText = "Total Amount : " + total;
+        }
+        function getTotal(){
+            var price = document.getElementById("price");
+            var quantity = document.getElementById("quantity");
+            var total = price.value * quantity.value;
+            var amount = document.getElementById("amount");
+            amount.innerText = "Total Amount : " + total;
+        }
+</script>
+    </body>
+</html>
