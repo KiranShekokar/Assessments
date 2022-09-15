@@ -1,0 +1,22 @@
+<!doctype>
+<html>
+    <head>
+        <title>Javascript Demo</title>
+    </head>
+    <body>
+            <label>User Name : </label>
+            <input type="text" id="name" name="user" >
+            <input type="button" id="message" value="Get Message" onclick="message()">
+            <p id="para"></p>
+
+        <script>
+            function message(){
+            var getName=document.getElementById("name");
+            var pName=document.getElementById("para");
+           
+            pName.innerText="Welcome " + getName.value + " !";  // it means that paragraph will display the reuired thing(innerText)
+                       
+        }
+        </script>
+    </body>
+</html>
