@@ -1,0 +1,46 @@
+<html>
+<head> </head>
+<body id="change">
+	<h3>  Magic Show </h3>
+	<hr></hr>	
+	Color-color which color , do u want?  :  <select id="t1" name="t1">
+        <option>lightyellow</option>
+        <option>bisque</option>
+        <option>lightblue</option>
+        <option>lightgreen</option>
+    </select>
+
+</br></br>
+	<input type="button" onclick="f1()"   value="Set Item" />
+	<input type="button" onclick="f2()"   value="Get Item" />
+	<input type="button" onclick="f3()"   value="Remove Item" />
+	<br></br>
+	<hr/>
+	<input type="button" onclick="f4()" value="Click here for Magic!">
+	<script>	
+		function f1()
+		{
+			var obj = document.getElementById("t1");		
+			localStorage.setItem("t1", obj.value);			 
+			alert("User entered the color");	
+		}	
+		
+		function f2()
+		{	
+			 var str  =   localStorage.getItem("t1");	
+			alert("User entered " +  str + " color!");	
+		}
+		
+		function f3()
+		{	
+			localStorage.removeItem("t1");
+			alert("User removed  color");
+		}	
+        function f4(){
+            var magic = document.getElementById("t1");
+            var change = magic.value;
+            document.body.style.backgroundColor= change;
+        }	
+	</script>	 
+</body>
+</html>
