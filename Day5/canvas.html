@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>CANVAS DEMO</title>
+    </head>
+    <body>
+       <h1 align="center">Welcome to the Graphic show</h1>
+       <canvas id="rect" width="300" height="200" style="border:2px solid black; margin-left:37%;"></canvas><br/>
+       <input type="button" value="Create Graphics" onclick="graphics()" style="margin-left:45%;">
+       <script>
+        function graphics(){
+            var canvas = document.getElementById("rect");
+            var obj = canvas.getContext("2d");
+            //alert("active");
+            var x=10 , y=190 , w=35 ;
+            var ar= [-170,-60,-100,-80,-150,-180,-50]
+            for(var i=0;i<7;i++){
+            obj.beginPath();
+            obj.fillStyle="red";
+            obj.strokeRect="black";
+            obj.fillRect(x,y,w,ar[i]);
+            x=x+40;
+            }
+        }
+       </script>
+    </body>
+</html>
