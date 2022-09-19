@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Media Query</title>
+        
+       <!--- <link rel="stylesheet" href="media-large.css"> -->
+        <style>
+            #div1 li{
+    float:left;
+}
+li{
+    border:1px solid indigo;
+    margin-right:15px;
+    padding:4px;
+    background-color: green;
+    font-size:20px;
+    cursor: pointer;
+    width:170px;
+}
+hr{
+    border:1px solid indigo;
+    background-color:indigo;
+}
+h1{
+    font-size:40px;
+}
+a{
+    text-decoration: none;
+    color:indigo;
+}
+ /*@media only screen and (max-width:400px){
+    #div1 li{
+    float:none;
+    color:black;
+    position:relative;
+    left:-10px;
+       }
+    li{
+    border:1px solid lightblue;
+    margin-bottom:15px;
+    padding:5px;
+    background-color: lightblue;
+    color:black;
+    font-size:15px;
+    cursor: pointer;
+    width:auto;
+    }
+   hr{
+    border:1px solid white;
+    background-color:white;
+     }
+    h1{
+    font-size:20px;
+    color:green;
+    }
+   body{
+    background-color: lightpink;
+     }
+} */
+        </style>
+        <link rel="stylesheet" href="media-small.css" media="only screen and (max-width:400px)">
+    </head>
+    <body bgcolor="blanchedalmond" align="center">
+        <h1>Microsoft Products</h1>
+        <hr/>
+        <div id="div1">
+        <ul type="none">
+            <li><a href="#">Surface Laptop</a></li>
+            <li><a href="#">XBox Games</a></li>
+            <li><a href="#">Windows 11</a></li>
+            <li><a href="#">Azure Clouds</a></li>
+            </ul>
+        </div>
+    </body>
+</html>

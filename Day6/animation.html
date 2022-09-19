@@ -1,0 +1,28 @@
+<!doctype>
+<html>
+    <head>
+        <title>Animation</title>
+        <style>
+            @keyframes movetheglobe{
+                from{margin-left:100px;}
+                to{margin-left:1100px;}
+            }
+            #img1{
+                margin-left:100px;
+                animation-name:movetheglobe;
+                animation-duration:6s;
+                animation-iteration-count: infinite;
+                animation-direction: alternate;
+            }
+            #div1 {
+            width:1200px;
+        padding-bottom: 3px;}
+        </style>
+    </head>
+    <body bgcolor="lightyellow">
+        <h1 align="center">The Globe moves!</h1><hr/>
+        <div id="div1">
+            <img id="img1" src="images/image5.png" width="80" height="90">
+        </div><hr/>
+    </body>
+</html>

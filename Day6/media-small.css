@@ -1,0 +1,30 @@
+#div1 li{
+    float:none;
+    color:black;
+    position:relative;
+    left:-10px;
+       }
+    li{
+    border:1px solid lightblue;
+    margin-bottom:15px;
+    padding:5px;
+    background-color: lightblue;
+    font-size:15px;
+    cursor: pointer;
+    width:auto;
+    }
+   hr{
+    border:1px solid white;
+    background-color:white;
+     }
+    h1{
+    font-size:20px;
+    color:green;
+    }
+   body{
+    background-color: lightpink;
+     }
+     a{
+        text-decoration: none;
+        color:black;
+     }
