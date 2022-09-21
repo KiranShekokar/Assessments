@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Account Closing</title>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/foundation-sites@6.7.5/dist/css/foundation.min.css" />
+        <style>
+            .div1{
+                border:3px solid gray;
+                width:50%;
+                margin-left:25%;
+                padding:15px;
+            }
+            span{
+                color:red;
+            }
+            label{
+                font-size:18px;
+                font-weight: bold;
+            }
+        </style>
+    </head>
+    <body>
+        <h3 align="center">Account Closing Form</h3><hr/>
+        <div class="div1">
+            <form action="close.php" method="post" autocomplete="off" id="bank-form">
+                <label>Name on Account <span>* </span></label>
+                <input type="text" required name="fname" placeholder="First Name">
+                <input type="text" name="mname" placeholder="Middle Name">
+                <input type="text" name="lname" placeholder="Last Name"><br/>
+                <label>Account Number <span>* </span></label>
+                <input type="text" pattern="\d{10}" required autofocus name="acc-no"><br/>
+                <label>Account Type</label>
+                 <input type="radio" name="type" value="Current" default> Current Account<br/>
+                <input type="radio" name="type" value="Savings"> Savings Account <br/><br/>
+                <label>Address <span>* </span></label>
+                <textarea required placeholder="Please Enter Full Address"></textarea>
+                <input required type="text" name="city" placeholder="City"> 
+                <input required type="text" name="state" placeholder="State">
+                <input required type="text" pattern="\d{5}" name="pincode" placeholder="Pincode"> <br/>
+                <label>Occupation</label>
+                <select>
+                    <option name="private" default>Private Sector</option>
+                    <option name="government">Government Sector</option>
+                    <option name="others">Others</option>
+                </select><br/><br/>
+                <label>Phone Number <span>*</span></label>
+                <select>
+                    <option name="home">Home</option>
+                    <option name="office">Office</option> 
+                </select>
+                <input type="text" required pattern="\d{10}" name="phnumber" placeholder="Enter Mobile Number"><br/>
+                <input type="submit" class="button expanded" value="Submit">
+            </form>
+            <input type="checkbox" name="agree" form="bank-form" required> I agree to the terms & conditions.<span>*</span>
+
+        </div>
+    </body>
+</html>

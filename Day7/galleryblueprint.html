@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Image gallery</title>
+        <link href="https://unpkg.com/blueprint-css@3.1.3/dist/blueprint.min.css" rel="stylesheet" />
+        <style>
+            div img{
+                border:2px solid black;
+                padding:3px;
+                margin:2px;
+            }
+        </style>
+    </head>
+    <body>
+        <h1 align="center">BluePrint Demo</h1><hr/><hr/><br/>
+        <div bp="grid">
+            <div bp="2"><img src="images/image1.jpg" height="300" width="100%"></div>
+            <div bp="8"><img src="images/image2.jpg" height="300" width="100%"></div>
+            <div bp="2"><img src="images/image3.jpg" height="300" width="100%"></div>
+        </div>
+        <div bp="grid">
+            <div bp="4"><img src="images/image4.jpg" height="300" width="100%"></div>
+            <div bp="4"><img src="images/image5.jpg" height="300" width="100%"></div>
+            <div bp="4"><img src="images/image6.jpg" height="300" width="100%"></div>
+        </div>
+        <div bp="grid">
+            <div bp="6"><img src="images/image1.jpg" height="300" width="100%"></div>
+            <div bp="4"><img src="images/image3.jpg" height="300" width="100%"></div>
+            <div bp="2"><img src="images/image2.jpg" height="300" width="100%"></div>
+        </div>
+
+    </body>
+</html>
