@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Form with JSON</title>
+        <style>
+          #fieldset{
+            border:3px solid black;
+            padding:15px;
+            background-color: beige;
+          }
+          #button{
+            background-color:lightcoral;
+            color:black;
+            border:none;
+            padding:10px;
+            font-weight: bold;
+            width: 100%;
+          }
+         #print{
+            text-align: center;
+         }
+        </style>
+    </head>
+    <body>
+        <h1 align="center">FORM with JSON</h1><hr/>
+        <div id="fieldset">
+                <input type="button" onclick="convertToobj()" value="Fill Auto" id="button"><br/><br/>
+                Employee Number : <input type="number" name="enumb" id="enumb" ><br/><br/>
+                Employee Name : <input type="text" name="ename" id="ename" ><br/><br/>
+                Role : <input type="text" name="role" id="role"><br/><br/>
+                Salary  : <input type="number" name="salary" id="salary"><br/><br/>
+                Department  : <input type="text" name="dep" id="dep"><br/><br/>
+                <input type="button" onclick="convertTojson()" value="Convert To Json" id="button"><br/>
+                <br/>
+                <p id="print"></p>
+        </div>
+        <script>
+            function convertTojson(){
+                var enumb =document.getElementById("enumb");
+                var ename =document.getElementById("ename");
+                var role =document.getElementById("role");
+                var salary =document.getElementById("salary");
+                var dep =document.getElementById("dep");
+
+                var obj = {empno : parseInt(enumb.value) , ename: ename.value, role:role.value , salary:parseInt(salary.value),dep:dep.value};
+                console.log(obj);
+                var json = JSON.stringify(obj);
+                var state = document.getElementById("print");
+                state.innerText = json;
+            }
+            function convertToobj(){
+              var obj = '{"enum":12345 , "ename":"Kiran", "job":"analyst", "salary":"50000","department":"Studio"}';
+              var obj1 = JSON.parse(obj);
+              var enumb =document.getElementById("enumb");
+                var ename =document.getElementById("ename");
+                var role =document.getElementById("role");
+                var salary =document.getElementById("salary");
+                var dep =document.getElementById("dep");
+
+                enumb.value = obj1.enum;
+                ename.value=obj1.ename;
+                role.value= obj1.job;
+                salary.value=obj1.salary;
+                dep.value=obj1.department;
+
+              
+
+
+            }
+        </script>
+    </body>
+</html>

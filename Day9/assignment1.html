@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>JSON</title>
+        <style>
+            input{
+                padding:8px;
+                background-color: lightskyblue;
+                float:center;
+            }
+        </style>
+    </head>
+    <body>
+        <h1 align="center">JSON MAGIC</h1><hr/>
+        <input type="button" value="Object To JSON" onclick="objTojson()" align="center">
+        <input type="button" value="JSON to Object" onclick="jsonToobj()" align="center">
+
+
+        <script>
+            function objTojson(){
+              var Obj = {empno:12345 ,empname:"Kiran" ,job:"Analyst" ,salary: 50 ,department:"Studio"};
+              console.log(Obj);
+              var Json = JSON.stringify(Obj);
+              console.log(Json);
+
+            }
+            function jsonToobj(){
+              var Json = '{"empno":12345 ,"empname":"Kiran" ,"job":"Analyst" ,"salary":50 ,"department":"Studio"}';
+              console.log(Json);
+              var Obj = JSON.parse(Json);
+              console.log(Obj);
+
+            }
+        </script>
+    </body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>JSON Application</title>
+    </head>
+    <style>
+        #button{
+            background-color:lightcoral;
+            color:black;
+            border:none;
+            padding:10px;
+            font-weight: bold;
+          }
+          #img{
+            border:3px solid black;
+            height:200px;
+            width:200px;
+          }
+    </style>
+    <body>
+        <h1 align="center">JSON APPLICATION</h1><hr/>
+        <div id="div1"></div>
+        <input type="button" value="GET USER DATA" onclick="getdata()" id="button"><br/><br/>
+        User ID : <span id="uid"></span><br/>
+        First Name : <span id="fname"></span><br/>
+        Last Name : <span id="lname"></span><br/>
+        Email : <span id="email"></span><br/>
+        Avatar : <br/><img id="img">
+
+
+        <script>
+            function getdata(){
+                var str = '{"id":2,"email": "janet.weaver@reqres.in", "fname": "Janet","lname": "Weaver", "avatar":"https://reqres.in/img/faces/2-image.jpg"}';
+                var obj = JSON.parse(str);
+                var uid = document.getElementById("uid");
+                var fname = document.getElementById("fname");
+                var lname = document.getElementById("lname");
+                var email = document.getElementById("email");
+                var img = document.getElementById("img");
+
+                uid.innerText = obj.id;
+                fname.innerText=obj.fname;
+                lname.innerText = obj.lname;
+                email.innerText = obj.email;
+                img.src = obj.avatar;
+            }
+        </script>
+    </body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>JSON-Array</title>
+    </head>
+    <style>
+        input{
+            padding:9px;
+            background-color: lightcoral;
+            color:black;
+        }
+    </style>
+    <body>
+        <h1 align="center">JSON & ARRAY</h1><hr/>
+        <input type="button" value="JSON to ARRAY" onclick="jsonToarray()">
+        <input type="button" value="ARRAY to JSON" onclick="arrayTojson()">
+
+        <script>
+            function jsonToarray(){
+                var json = '[{"ename":"Kiran","enumber":12345,"role":"analyst","salary":50,"department":"studio"},{"ename":"Kiran","enumber":12345,"role":"analyst","salary":50,"department":"studio"},{"ename":"Kiran","enumber":12345,"role":"analyst","salary":50,"department":"studio"},{"ename":"Kiran","enumber":12345,"role":"analyst","salary":50,"department":"studio"}]'
+                console.log(json);
+                var array = JSON.parse(json);
+                console.log(array);
+            }
+            function arrayTojson(){
+                var array = [{ename:"kiran",enumber:12345,role:"analyst",salary:50,department:"Studio"},{ename:"kiran",enumber:12345,role:"analyst",salary:50,department:"Studio"},{ename:"kiran",enumber:12345,role:"analyst",salary:50,department:"Studio"},{ename:"kiran",enumber:12345,role:"analyst",salary:50,department:"Studio"}]
+                console.log(array);
+                var json = JSON.stringify(array);
+                console.log(json);
+            }
+        </script>
+    </body>
+</html>
