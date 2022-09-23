@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Color Change</title>
+    </head>
+    <body id="body" onload="getBg()">
+       <h1 id="h1"></h1>
+       <p id="p1"></p>
+
+
+       <script>
+        function getBg(){
+        //get user data
+          var UserDataStr = localStorage.getItem("uid");
+
+        //taking elements
+          var ElementObj = document.getElementById("h1");
+          var paraObj = document.getElementById("p1");
+
+          if(UserDataStr == null){
+              ElementObj.innerText= "Welcome Guest User!";
+              return;
+          }
+
+          // this data is in string , convert it to obj
+          var UserDataObj = JSON.parse(UserDataStr);
+
+          //display the required output
+          body.style.background = UserDataObj.Color;
+          ElementObj.innerText= "Welcome " + UserDataObj.Name;
+          paraObj.innerText = "Date of Joining is "  + UserDataObj.Date;
+          
+        }
+       </script>
+
+    </body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>local storage + JSON</title>
+    </head>
+    <body>
+        <h1 align="center">Welcome User</h1>
+        Customer Name : <input type="text" name="name" id="name"><br/><br/>
+        Joined date : <input type="date" name="date" id="date"><br/><br/>
+        Favourite Color : <input type="color" id="color" name="color" ><br/><br/>
+        <input type="button" onclick="GetData()" value="Save the Data">
+        <input type="button" onclick="DeleteData()" value="Delete the Data">
+        <script>
+          function GetData(){
+            //taking elements from html
+            var txtNameObj = document.getElementById("name");
+            var txtJoinObj = document.getElementById("date");
+            var txtColorObj = document.getElementById("color");
+
+            //create object 
+            var UserObj = {Name:txtNameObj.value, Date:txtJoinObj.value , Color : txtColorObj.value};
+
+            //converting obj to string
+            var UserStr = JSON.stringify(UserObj);
+
+           // storing data in local storage (as string)
+            var LocalObj = localStorage.setItem("uid",UserStr);
+
+            alert("data saved!");
+
+          }
+          function DeleteData(){
+            localStorage.removeItem("uid");
+            alert("Data Removed Successfully!");
+          }
+        </script>
+    </body>
+</html>
