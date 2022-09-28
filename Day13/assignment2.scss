@@ -1,0 +1,32 @@
+
+@mixin button($color : blue,$shape:"rectangle"){
+     background-color: $color;
+     padding:8px;
+     font-size:20px;
+     font-weight:bold;
+     color:white;
+    @if($shape == "rectangle"){
+        height:100px;
+        width:200px;
+        border-radius:0px;
+    }
+     @if($shape == "square"){
+        height:200px;
+        width:200px;
+        border-radius: 0px;
+     }
+     @if($shape == "circle"){
+        height:200px;
+        width:200px;
+        border-radius:100px; 
+     }
+    } 
+.btn{
+    @include button;
+}
+.btn-square{
+    @include button($color:lightblue,$shape:"square");
+}
+.btn-circle{
+    @include button($color:green,$shape:"circle");
+}

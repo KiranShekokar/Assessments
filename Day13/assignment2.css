@@ -1,0 +1,32 @@
+.btn {
+  background-color: blue;
+  padding: 8px;
+  font-size: 20px;
+  font-weight: bold;
+  color: white;
+  height: 100px;
+  width: 200px;
+  border-radius: 0px;
+}
+
+.btn-square {
+  background-color: lightblue;
+  padding: 8px;
+  font-size: 20px;
+  font-weight: bold;
+  color: white;
+  height: 200px;
+  width: 200px;
+  border-radius: 0px;
+}
+
+.btn-circle {
+  background-color: green;
+  padding: 8px;
+  font-size: 20px;
+  font-weight: bold;
+  color: white;
+  height: 200px;
+  width: 200px;
+  border-radius: 100px;
+}/*# sourceMappingURL=assignment2.css.map */
