@@ -1,0 +1,60 @@
+@import 'header_para';
+
+//link
+.link{
+    color:black;
+    text-decoration:none;
+    font-size:30px;
+    &:hover{
+        text-decoration:underline;
+        font-weight:bold;
+    }
+}
+
+//mixin
+.shape (@shape) when (@shape="square"){
+    border:2px solid black;
+    width:200px;
+    height:200px;
+    border-radius:0px; 
+}
+
+.shape (@shape) when (@shape="circle"){
+    border:2px solid black;
+    width:200px;
+    height:200px;
+    border-radius:100px; 
+}
+
+.shape (@shape) when (@shape="rectangle"){
+    border:2px solid black;
+    width:400px;
+    height:200px;
+    border-radius:0px; 
+}
+
+.square{
+    .shape("square");
+}
+
+.circle{
+    .shape("circle");
+}
+
+.rectangle{
+    .shape("rectangle");
+}
+
+.btn{
+    width:400px;
+    height:50px;
+    background-color: lightgrey;
+    border-radius:50px;
+    font-size:20px;
+}
+.fancybutton{
+
+    &:extend(.btn);
+    background-color: black;
+    color:white;
+}
