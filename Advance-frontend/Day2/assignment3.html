@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Assignment-3</title>
+    </head>
+    <body>
+        <h1 align="center">JavaScript Programming - Loops</h1><hr/>
+        <button type="button" value="Get Value" onclick="fn_listforloop()">Get Value - for loop</button>
+        <button type="button" value="Get Value" onclick="fn_listwhileloop()">Get Value - while loop</button>
+        <button type="button" value="Get Value" onclick="fn_listdowhileloop()">Get Value - do-while loop</button>
+        <ul type="none" style="border:3px solid red;padding:10px;text-align:center;width:30%;">
+            <li id="list"></li>
+        </ul>
+        
+
+      <script>
+         function fn_listwhileloop(){
+            var listObj = document.getElementById("list");
+            var i=1;
+            while(i<=5){
+                listObj.innerHTML = listObj.innerHTML + "Welcome to JavaScript - " + i +"<br/>";
+                i++;
+            }
+         }
+
+         function fn_listforloop(){
+            var listObj = document.getElementById("list");
+            for(var i=1;i<=5;i++){
+                listObj.innerHTML = listObj.innerHTML + "Welcome to JavaScript - " + i +"<br/>";
+            }
+         }
+
+         function fn_listdowhileloop(){
+            var listObj = document.getElementById("list");
+            var i=1;
+            do{
+                listObj.innerHTML = listObj.innerHTML + "Welcome to JavaScript - " + i +"<br/>";
+                i++;
+            }
+            while(i<=5)
+         }
+      </script>
+
+    </body>
+</html>

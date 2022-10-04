@@ -1,0 +1,12 @@
+1) Pop-up boxes in js:
+   -> alert()
+   -> confirm-box
+   -> prompt ->allows user to enter data in the pop-up box
+2)BOM & DOM -> browser object model , document object model.
+<i do not have proper clarity on this>
+
+3,4) uploaded in different file
+
+5)push(): method to add one or more elements to the end of an array and returns the new length of the array
+pop(): method to remove the last element of an array
+splice(): a built-in method for JavaScript Array objects > adds elements to array at any position
