@@ -1,0 +1,41 @@
+1.Different activities that we do using js in client side programming
+-validations
+-adding interactive behaviour to web pages(eg. show/hide operations , colorchange on button click
+)
+
+
+2. JavaScriptCore is apple's engine for safari
+3. code file sent along
+4. a) when wrong file name given in src attribute of script tag it throws an error that the            incorrectfilename not found.
+   b) No, the file names are not case sensitive.
+
+assignment-2
+
+1.Yes we can disable js in browser , the method varies from browser to browser. It is done to see how  the website will look if the user has disabled js .And if website functionality not working then by disabling the js we can make sure that the non-functionality is due to js or some other reasons.
+Chrome: top-right-3dots>settings> privacy&security >site setting > content->js>select don't allow sites to use js
+Edge: top-right-3dots>settings>cookies & site permissions >all permission->js> turn allowed to off.
+
+2. Undefined : variable is declared but not initaed an hence when called will display 'undefined' in console window.
+ Not Defined: when a variable is called which does not exist then it shows that variable 'not defined' in console window.
+
+3. java: a)object oriented programming language.
+ b) programming language.
+ c) creates application which runs either on machine or browser.
+ d) usage of object is must
+ e) it works alone does not need any language to incorporate into.
+ f)large memory required
+ g)stored as byte code
+ h) data type of variable declared beforehand
+
+ 
+ javascript: a) Object Oriented Scripting language.
+  b) scripting language.(scripting language means a language which requires high level construct to interpret and execute one command at a time. Used to automate the processes at application level)
+  c) runs only in browser, scripting language is used to give instructions to programs that are running on a computer . scripting language is the one which does not require a compiler and it interprets one by one at runtime)
+  d) objects may/maynot be used
+  e) incorporated in html , no existence as a solo language.
+  f)memory consumption is less.
+  g)stored as source code
+  h)variable datatype can be changed at any time.
+
+4. JS Data Types : js is weakly typed language i.e. datatypes can be changed at any pt of time .
+  data types : number , string , boolean , objects , array , null , undefined.
