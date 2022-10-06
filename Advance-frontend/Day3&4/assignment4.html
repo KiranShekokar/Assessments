@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Assignment4</title>
+    </head>
+    <body>
+        <h1 align="center">Form Validation</h1><hr/>
+        <form method="post" action="book.php" onsubmit="fn_validation()">
+            <input type="text" id="name" name="name" placeholder="Customer Name"><br/><br/>
+            <input type="text" id="source" name="source" placeholder="Enter Source Station"><br/><br/>
+            <input type="text" id="destination" name="destination" placeholder="Enter Destination Station"><br/><br/>
+            <input type="text" id="num" name="contact" placeholder="Enter Contact Number"><br/><br/>
+            <input type="submit" value="SUBMIT"><br/><Br/>
+            <span id="msg"></span>
+        </form>
+
+        <Script>
+            function fn_validation(){
+                var inpNameObj = document.getElementById("name").value;
+                var inpSourceStation = document.getElementById("source").value;
+                var inpDestinationStation = document.getElementById("destination").value;
+                var msgObj = document.getElementById("msg");
+                var inpConObj = document.getElementById("num").value;
+                if(inpNameObj == ""){
+                    msgObj.innerHTML="Customer Name is a required field";
+                    document.getElementById("name").focus();
+                    event.preventDefault();
+                    retun;
+                }
+                if(inpSourceStation=="" || inpDestinationStation==""){
+                    msgObj.innerHTML="Source and destination cannot be empty";
+                    document.getElementById("source").focus();
+                    event.preventDefault();
+                    return;
+                }
+                if(inpSourceStation==inpDestinationStation){
+                    msgObj.innerHTML="Source and destination cannot be same";
+                    document.getElementById("source").focus();
+                    event.preventDefault();
+                    return;
+                }
+                if(inpConObj.length!=10){
+                    msgObj.innerHTML="Incorrect Mobile number";
+                    document.getElementById("num").focus();
+                    event.preventDefault();
+                    return;
+                }
+                else{
+                    msgObj.innerHTML="";
+                }
+
+            }
+        </Script>
+    </body>
+</html>

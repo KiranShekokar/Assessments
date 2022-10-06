@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Assignment-3</title>
+    </head>
+    <body>
+        <h1 align="center">Check your Branch</h1><hr/>
+        <select name="city" onchange="fn_showImage(event)">Select city
+            <option id="pune" value="img1">Pune</option>
+            <option id="banglore" value="img2">Banglore</option>
+            <option id="chennai" value="img3">Chennai</option>
+            <option id="hyderabad" value="img4">Hyderabad</option>
+        </select><br/><br/>
+        <img id="img" height="200" width="200">
+
+        <script>
+            function fn_showImage(event){
+                var imgObj = document.getElementById("img");
+                imgObj.src ="images/"+ event.target.value + ".jpg";
+            }
+        </script>
+
+    </body>
+</html>

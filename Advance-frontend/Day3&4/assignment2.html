@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Assignment2 | Day 3&4 </title>
+    </head>
+    <body>
+        <h1 align="center">Form-Validation Using JS</h1> <hr/>  
+        <form method="post" action="submit.php" onsubmit="fn_validation()">
+            <input type="text" name="email" id="email" autofocus onblur="fn_required()" placeholder="Enter Email-ID"><span id="msg"></span><br/><br/>
+            <input type="password" name="pswd" id="pswd" placeholder="Enter Password"><br/><br/>
+            <input type="submit" value="SUBMIT">
+        </form>
+        <script>
+            function fn_validation()
+            {
+               var inputEmailObj = document.getElementById("email").value;
+               var inputPswdObj = document.getElementById("pswd").value;
+               if( inputEmailObj == "k@gmail.com" && inputPswdObj == "12345"){
+                  alert("submitted");
+               }
+               else{
+                 alert("Invalid Credentials");
+                 event.preventDefault();
+               }
+            }
+            function fn_required(){
+                var inputEmailObj = document.getElementById("email").value;
+               if(inputEmailObj == "" || inputEmailObj.trim().length === 0){
+                  var spanMsgObj = document.getElementById("msg");
+                  spanMsgObj.innerHTML = "Email-ID is required!&#128512";
+                  document.getElementById("msg").focus();
+               }
+               else{
+                document.getElementById("msg").innerHTML = "";
+               }
+            }
+        </script>
+    </body>
+</html>

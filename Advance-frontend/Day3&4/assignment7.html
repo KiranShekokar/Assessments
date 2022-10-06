@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Assignment 7</title>
+    </head>
+    <body>
+        <h1 align="center">Object with different methods</h1><hr/>
+        <button type="button" onclick="fn_method1()">Object-1</button>
+        <button type="button" onclick="fn_method2()">Object-2</button>
+        <button type="button" onclick="fn_method3()">Object-3</button>
+        <p id="div1" border="4"></p>
+
+        <script>
+            function fn_method1(){
+                var div1Obj = document.getElementById("div1");
+                var empObj = {
+                    empno : 123,
+                    empname : "KIRAN",
+                    department : "C&M"
+                }
+                //var str = `Employee No. : ${empObj.empno} , Employee Name : ${empObj.empname} , Department : ${empObj.department}`;
+
+                div1Obj.innerHTML = `Employee No. : ${empObj.empno} <br/> Employee Name : ${empObj.empname} <br/> Department : ${empObj.department}`;
+                
+            }
+            function fn_method2(){
+                var div1Obj = document.getElementById("div1");
+                var empObj = {};
+                empObj.empname = "ANU";
+                empObj.empno = 345;
+                empObj.department = "S&A";
+                div1Obj.innerHTML = `Employee No. : ${empObj.empno} <br/> Employee Name : ${empObj.empname} <br/> Department : ${empObj.department}`;
+            }
+            function employee(){
+                this.empname = "NIKHIL";
+                this.empno = 567;
+                this.department = "CBO";
+            }
+            function fn_method3(){
+                var div1Obj = document.getElementById("div1");
+                var empObj = new employee();
+                div1Obj.innerHTML = `Employee No. : ${empObj.empno} <br/> Employee Name : ${empObj.empname} <br/> Department : ${empObj.department}`;
+            }
+        </script>
+    </body>
+</html>
