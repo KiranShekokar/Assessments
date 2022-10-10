@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Assignment-7</title>
+    </head>
+    <body>
+        <h1 align="center">JS Dynamic Table</h1><hr/>
+        <input type="button" onclick="getData()" value="Get Table">
+        <table border="1" id="table">
+            <tr>
+                <th>Course</th>
+                <th>Course</th>
+                <th>Course</th>
+                <th>Course</th>
+            </tr>
+        </table>
+      <script>
+         function getData(){
+            var count=0;
+            var tableObj = document.getElementById("table");
+            var tech = ["HTML","CSS3","jQuery","AngularJS","Bootstrap","NodeJS","HTML","CSS3","jQuery","AngularJS","Bootstrap","NodeJS"];
+            var x=0;
+             for(var i=0;i<4;i++){                         
+                var row = tableObj.insertRow(-1);
+               for(var j=0;j<4;j++){
+                x++;
+                 var cell = row.insertCell(-1); 
+                 cell.innerHTML = tech[x];
+                 if(x==12){
+                    cell.innerHTML = "";
+                 }
+                 if(tableObj.rows.length>(tech.length/3)){
+                    tableObj.deleteRow(-1);
+                 }
+               }
+              }
+             console.log(tech.length);
+            }
+      </script>
+    </body>
+</html>
