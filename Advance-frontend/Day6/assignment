@@ -1,0 +1,12 @@
+1. add/remove events dynamically w/o using event attributes -> by writing functions manually ->
+done using addEventListener('event','fn_name');
+
+example: if we want to add onlclick event to a button
+<script>
+var btnObj = document.getElementById("id");
+btnObj.addEventListener('click','fn_functionname');
+</script>
+
+2. destructuring array-
+ let arr=["kiran","shekokar","pune"];
+ let[firstname,lastname,place] = arr;

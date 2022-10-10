@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Assignment</title>
+    </head>
+    <body>
+        <h1 align="center"></h1><hr/>
+        Search Value : <input type="text" id="search">
+        <button type="button" onclick="fn_findByEmpno()">Find By Empno</button>
+        <button type="button" onclick="fn_findByJob()">Find By Job</button><br/><br/>
+        <table id="table1" border="3" style="width:600px;">
+            <tr>
+                <th>EmpNo</th>
+                <th>Ename</th>
+                <th>Job</th>
+                <th>Salary</th>
+                <th>Department No</th>
+            </tr>
+        </table>
+
+        <script>
+            var arr = [
+                {empno : 123,ename:"Kiran" , job : "Analyst", salary : 50000 , depno:"C&M"},
+                {empno : 125,ename:"Anu" , job : "Manager", salary : 70000 , depno:"AMC"},
+                {empno : 124,ename:"Poonam" , job : "Analyst", salary : 50000 , depno:"S&A"},
+                {empno : 122,ename:"Urvashi" , job : "Manager", salary : 60000 , depno:"CBO"},
+                {empno : 121,ename:"Shreyas" , job : "Analyst", salary : 50000 , depno:"C&M"},
+                {empno : 129,ename:"Nikhil" , job : "Consultant", salary : 80000 , depno:"S&A"},
+                {empno : 127,ename:"Prachi" , job : "Resource Manager", salary : 70000 , depno:"CBO"},
+                {empno : 126,ename:"Anuja" , job : "Manager", salary : 70000 , depno:"AMC"},
+                {empno : 120,ename:"Sravanthi" , job : "Analyst", salary : 50000 , depno:"C&M"},
+            ];
+           // var [obj1,obj2,obj3,obj4,obj5,obj6,obj7,obj8,obj9] = arr;
+            var [empno,ename] = arr;
+            var inpSearchObj = document.getElementById("search").value;
+            var tableObj = document.getElementById("table1");
+           
+            function fn_findByJob(){  
+                var inpSearchObj = document.getElementById("search").value;
+                var i = arr.filter(item=>item.job == inpSearchObj);
+                for(var j=0;j<i.length;j++){
+                    var row = tableObj.insertRow(-1);
+                    var cell1=row.insertCell(-1);
+                    var cell2=row.insertCell(-1);
+                    var cell3=row.insertCell(-1);
+                    var cell4=row.insertCell(-1);
+                    var cell5=row.insertCell(-1);
+
+                    cell1.innerHTML = i[j].empno;
+                    cell2.innerHTML = i[j].ename;
+                    cell3.innerHTML = i[j].job;
+                    cell4.innerHTML = i[j].salary;
+                    cell5.innerHTML = i[j].depno;
+
+                }
+              }
+
+              function fn_findByEmpno(){  
+                var inpSearchObj = document.getElementById("search").value;
+                var i = arr.filter(item=>item.empno == inpSearchObj);
+                for(var j=0;j<i.length;j++){
+                    var row = tableObj.insertRow(-1);
+                    var cell1=row.insertCell(-1);
+                    var cell2=row.insertCell(-1);
+                    var cell3=row.insertCell(-1);
+                    var cell4=row.insertCell(-1);
+                    var cell5=row.insertCell(-1);
+
+                    cell1.innerHTML = i[j].empno;
+                    cell2.innerHTML = i[j].ename;
+                    cell3.innerHTML = i[j].job;
+                    cell4.innerHTML = i[j].salary;
+                    cell5.innerHTML = i[j].depno;
+
+                }
+              }
+        </script>
+    </body>
+</html>
