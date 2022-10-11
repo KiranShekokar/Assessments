@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>AJAX-PROMISE</title>
+    </head>
+    <body>
+        <h1 align="center">AJAX PROMISE</h1><hr/>
+        <span id="number"></span>
+
+
+
+        <script>
+            var spanObj = document.getElementById("number");
+            const myPromise = new Promise((resolve,reject)=>
+            {
+                var randomNum = Math.floor(Math.random()*50);
+                spanObj.innerHTML = randomNum;
+                if(randomNum %5 ==0){
+                    resolve(randomNum);
+                }
+                else{
+                    reject("Error message:Number not multiple of 5");
+                }
+            });
+
+            myPromise.then((response)=>{
+                console.log("The number is " + response);
+            })
+            .catch((errorResponse)=>{
+                console.log("Error message:Number not multiple of 5");
+            });
+
+        </script>
+    </body>
+</html>

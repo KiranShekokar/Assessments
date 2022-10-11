@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Button click</title>
+    </head>
+    <body>
+        <h1 align="center">Get Employee Data</h1><hr/>
+        <input type="number" id="emp_no" placeholder="Enter Employee Number"><br/><br/>
+        <button type="button" onclick="fn_getData()">Get Data</button>
+        <p id="para"></p>
+        <script>
+           /* async function fn_buttonClick(){
+                try{
+                    var response = await fn_getData();
+                    console.log(response);
+                }
+                catch(error){
+                    console.log(error);
+                }
+                
+            } */
+            async function fn_getData(){
+                try{
+                var inpNumObj = document.getElementById("emp_no").value;
+                var paraObj = document.getElementById("para");
+                let url = "https://dummy.restapiexample.com/api/v1/employee/"+inpNumObj;
+                //console.log(url);
+                let response = await fetch(url);
+                let result = await response.json();
+                console.log(result.data);
+                var a = result.data;
+                
+               paraObj.innerHTML = JSON.stringify(a);
+              
+               // paraObj.innerHTML = result.data[i];
+            }catch(error){
+                console.log(error);
+            }
+
+            }
+        </script>
+    </body>
+</html>

@@ -1,0 +1,18 @@
+1) setInterval() -> to call a function everytime after a given time setInterval
+ setInterval(print,1000)  <this will call the function print after every 1000milliseconds>
+
+ function print(){
+    document.getElementById("id).innerHTML += "hello";
+ }
+ *this method continues till clearInterval() is called or window is closed
+  
+2) setTimeout() -> to call a function once after a given setInterval
+to invoke this clearTimeout() is used
+
+setInterval(print,1000)  <this will call the function print once after  1000milliseconds>
+
+ function print(){
+    document.getElementById("id).innerHTML += "hello";
+ }
+
+ 3)Callbacks > passing a function as a parameter of some other function eg-map(function),setInterval(),setTimeout().

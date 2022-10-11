@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Image Magic</title>
+    </head>
+    <body>
+        <h1 align="center">Image Play & Stop</h1><hr/>
+        <button type="button" onclick="fn_start()"><img src="https://png.pngtree.com/png-vector/20190419/ourmid/pngtree-vector-play-icon-png-image_956416.jpg" height="50" width="50"></button>
+
+        <button type="button" onclick="fn_stop()"><img src="https://cdn-icons-png.flaticon.com/512/4029/4029084.png" height="50" width="50"></button><br/><br/>
+        <img id="img" width="500" height="300" border="3">
+
+        <script>
+            var count=0;
+            var stop;
+            function fn_start(){
+                stop = setInterval(function(){
+                    count++;
+                    var imgObj = document.getElementById("img");
+                    imgObj.src =  "images/img"+count+".jpg";
+                    if(count>6){
+                       count=0;
+                       return;
+                    }
+                },500);
+            }
+            function fn_stop(){
+                clearInterval(stop);
+            }
+        </script>
+    </body>
+</html>
