@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Calculator</title>
+    </head>
+    <body>
+        <table border="2" >
+            <tr >
+                <th colspan="4" style="height:20px"><input type="text" readonly id="total"></th>
+            </tr>
+            <tr>
+                <td style="padding:7px;"><input type="button"  id="1" class="num" value="1"></td>
+                <td style="padding:7px;"><input type="button"  id="2" class="num" value="2"></td>
+                <td style="padding:7px;"><input type="button"  id="3" class="num" value="3"></td>
+                <td style="padding:7px;"><input type="button"  id="0" class="num" value="0"></td>
+            </tr>
+            <tr>
+                <td style="padding:7px;"><input type="button"  id="4" class="num" value="4"></td>
+                <td style="padding:7px;"><input type="button"  id="5" class="num" value="5"></td>
+                <td style="padding:7px;"><input type="button"  id="6" class="num" value="6"></td>
+                <td style="padding:7px;"><input type="button"  id="cl" class="num" value="cl"></td>
+            </tr>
+            <tr>
+                <td style="padding:7px;"><input type="button"  id="7" class="num" value="7"></td>
+                <td style="padding:7px;"><input type="button"  id="8" class="num" value="8"></td>
+                <td style="padding:7px;"><input type="button"  id="9" class="num" value="9"></td>
+                <td style="padding:7px;"><input type="button"  id="=" class="total" value="="></td>
+            </tr>
+
+            <tr>
+                <td style="padding:7px;"><input type="button"  id="+" class="operation" value="+"></td>
+                <td style="padding:7px;"><input type="button"  id="-" class="operation" value="-"></td>
+                <td style="padding:7px;"><input type="button"  id="x" class="operation" value="*"></td>
+                <td style="padding:7px;"><input type="button"  id="/" class="operation" value="/"></td>
+            </tr>
+        </table>
+
+        <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+        <script>
+             var obj;
+             var total;
+            $(document).ready(function(){
+                $(".num").click(function(){
+                  // alert("hi");                
+                  var number = $(this).val();
+                    //alert(number);
+                 $("#total").val( $("#total").val() + number);
+                 
+                })
+
+            $(".operation").click(function(){
+                  // alert("hi");                
+                  var number = $(this).val();
+                    //alert(number);
+                 $("#total").val( $("#total").val() + number);
+                
+                })
+
+                $(".total").click(function(){
+                let x = $("#total").val();
+                // console.log(x);
+                 $("#total").val(eval(x));
+                })
+
+                $("#cl").click(function(){
+                   $("#total").val("");
+                  
+                })
+        })
+        </script>
+    </body>
+</html>

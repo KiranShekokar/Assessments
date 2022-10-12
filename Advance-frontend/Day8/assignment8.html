@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Timer</title>
+    </head>
+    <body>
+        <h1 align="center">TIMER</h1><hr/>
+        <p style="border:2px solid black;text-align:center;">
+
+
+        <span id="hours" style="font-size:60px;">00</span><span style="font-size:60px;">:</span>
+        <span id="minutes" style="font-size:60px;">00</span><span style="font-size:60px;">:</span>
+        <span id="seconds" style="font-size:60px;">00</span><br/><br/>
+
+        <input type="button" id="start" value="Start"><input type="button" id="stop" value="Stop"><br/><br/>
+
+        </p>
+        <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+        <script>
+            var count=0;
+            var countmin=0;
+            var counthr=0;
+            var x;
+            var y;
+            var z;
+            $(document).ready(function(){
+                $("#start").click(function(){
+                    x = setInterval(function(){
+                        count ++;
+                        $("#seconds").text("0"+count);
+                        if(count>9){
+                            $("#seconds").text(count);
+                        }
+                        if(count>59){
+                            count=1;
+                            $("#seconds").text("01");
+                        }
+                    },1000);
+                    y = setInterval(function(){
+                        countmin++;
+                        $("#minutes").text("0"+countmin);
+                        if(countmin>9){
+                            $("#seconds").text(countmin);
+                        }
+                        if(countmin>59){
+                            countmin=1;
+                            $("#seconds").text("01");
+                        }
+                    },60000)
+                    z = setInterval(function(){
+                        counthr++;
+                        $("#hours").text("0"+counthr);
+                        if(counthr>9){
+                            $("#seconds").text(counthr);
+                        }
+                        if(counthr>59){
+                            counthr=1;
+                            $("#seconds").text("01");
+                        }
+                    },3600000)
+                })
+
+            $("#stop").click(function(){
+                clearInterval(x);
+                clearInterval(y);
+                clearInterval(z);
+            })
+            })
+        </script>
+    </body>
+</html>

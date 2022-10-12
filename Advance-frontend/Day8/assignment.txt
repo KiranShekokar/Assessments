@@ -1,0 +1,29 @@
+1) Different types of selectors in css : 
+ a)combinators - >, (Space) , + , ~
+ b)pseudo class selectors -> : => hover,link,active etc
+ c) pseudo elements selectors => :: =>selection , first-letter , first-line
+ d) simple selector - using classname , id , tagname
+ e) attribute selector - to select elements with a specified attribute or attribute value
+  example: a[target]{  <!--can also by written as a[target=_blank]{}
+    color:red;
+  }
+  <a href="#" target="_blank">Click Here</a>
+
+2) CDN: when used first time it takes from the server & saves it in the temporary storage of browser thus need
+ not to call the server again and again.
+
+3) difference between "this" & $(this) -> both refers to the same element , "this" normal notation=>it is a keyword,used as this.innerText = "hey" ;
+  $(this)=>got the power of jQuery, it has become jquery object,used as $(this).text("hey");
+
+4)Use of $(document).ready() => ready occurs when dom has been loaded.
+ this prevents any jQuery code to run before dom loading
+ the main motive of this statement is the execution of jQuery code after the dom is loaded.
+ when script tag is in the middle of the code then if $(document).ready() is not used then the execution will be as per the order of the code , but if $(document).ready() is used then jquery code will work only when the dom is loaded irrespective of the position of the script tag.
+
+# Firebug :  free and open-source web browser extension for Mozilla Firefox that facilitated the live debugging, editing, and monitoring of any website's CSS, HTML, DOM, XHR, and JavaScript.
+
+6) attach one time events => one("event","data","function") // event is click,mouseover
+ data=> data to pass along function.
+ function=> which we need to perform.
+
+7) to select all textboxes => $(input[type=text]).event(function())

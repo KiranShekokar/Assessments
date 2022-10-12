@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Jquery Basics</title>
+    </head>
+    <body>
+        <h1 align="center">JQUERY BASICS</h1><hr/>
+        <select id="product" name="product" placeholder="Select Product" onchange="fn_getPrice()">
+            <option value="laptop">Laptop</option>
+            <option value="mobile">Mobile</option>
+            <option value="tablet">Tablet</option>
+            <option value="monitor">Monitor</option>
+            <option value="keyboard">Keyboard</option>
+            <option value="mouse">Mouse</option>
+        </select><br/><br/>
+        <input type="number" id="price" readonly name="price" placeholder="Price of the Choosen Product"><br/><br/>
+        <input type="number" id="qty" name="qty" placeholder="Enter Quantity"><br/><br/>
+        <button type="button" onclick="fn_getAmount()">GET AMOUNT</button><br/><br/>
+        <span id="info"></span>
+
+
+        <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+        <script>
+            $(document).ready();
+            var productArr =[
+                {product:"laptop",price:50000},
+                {product:"mobile",price:10000},
+                {product:"tablet",price:30000},
+                {product:"monitor",price:15000},
+                {product:"keyboard",price:5000},
+                {product:"mouse",price:3000}
+            ];
+            var priceObj;
+            var findObj;
+            var productObj;
+
+            function fn_getAmount(){
+                //alert("hi");
+                var qtyObj = $("#qty").val();
+                var spanObj = $("#info");
+                var amountObj = parseInt(productArr[findObj].price)*parseInt(qtyObj);
+                spanObj.text("The total amount of "+qtyObj+" "+ productObj + " is Rs." + amountObj);
+            }
+
+            function fn_getPrice(){
+                //alert("ji");
+            productObj = $("#product").val();
+            findObj = productArr.findIndex(item=>item.product == productObj);
+                //alert(productArr[findObj].price);
+                $("#price").val(productArr[findObj].price);
+            }
+        </script>
+    </body>
+</html>
+
+
