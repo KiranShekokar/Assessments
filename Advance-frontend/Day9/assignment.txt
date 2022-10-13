@@ -1,0 +1,12 @@
+1) delete all rows except first row - 
+
+$(document).ready(function(){
+	$('button').click(function(){
+	 	$("table tr").slice(1).remove(); //slice() i.e. it will slice the 1st row and remove the rest.
+	});
+});
+
+5) prev() => returns previous sibling elements of the selected element.
+next() => returns next sibling elements of the selected element.
+
+addClass

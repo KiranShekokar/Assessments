@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Assignment-2</title>
+    </head>
+    <body>
+        <h1 align="center">JQUERY BASICS</h1><hr/>
+        <select id="product" name="product" placeholder="Select Product" onchange="fn_getPrice()">
+            <option value="laptop">Laptop</option>
+            <option value="mobile">Mobile</option>
+            <option value="tablet">Tablet</option>
+            <option value="monitor">Monitor</option>
+            <option value="keyboard">Keyboard</option>
+            <option value="mouse">Mouse</option>
+        </select>
+        <input type="number" id="price" readonly name="price" placeholder="Price of the Choosen Product">
+        <input type="number" id="qty" name="qty" placeholder="Enter Quantity">
+        <button type="button" onclick="fn_getData()">INSERT INTO TABLE</button>
+        <span id="info"></span>
+        <br><br/>
+        <table id="table" border="2" cellspacing="5px" cellpadding="5px">
+            <tr>
+                <th>Product Name</th>
+                <th>Product Price</th>
+                <th>Product Quantity</th>
+            </tr>
+        </table>
+
+        <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+        <script>
+            $(document).ready();
+            var productArr =[
+                {product:"laptop",price:50000},
+                {product:"mobile",price:10000},
+                {product:"tablet",price:30000},
+                {product:"monitor",price:15000},
+                {product:"keyboard",price:5000},
+                {product:"mouse",price:3000}
+            ];
+            var priceObj;
+            var findObj;
+            var productObj;
+
+            function fn_getPrice(){
+                //alert("ji");
+            productObj = $("#product").val();
+            findObj = productArr.findIndex(item=>item.product == productObj);
+                //alert(productArr[findObj].price);
+                $("#price").val(productArr[findObj].price);
+            }
+
+            function fn_getData(){    
+
+                var quan = $("#qty").val();   
+
+                let str = "<tr><td>"+ productArr[findObj].product+"</td>"+"<td>"+ productArr[findObj].price+"</td>"+"<td>"+ quan+"</td></tr>";
+                
+                $("#table").append(str);
+            }
+        </script>
+    </body>
+</html>

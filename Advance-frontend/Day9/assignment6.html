@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Assignment-6</title>
+        <style>
+            #div1{
+                border:2px solid black;
+                border-radius:50px;
+            }
+        </style>
+    </head>
+    <body>
+        <h1 align="center">Assignment-6</h1><hr/>
+        
+          
+      
+
+        <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+        <script>
+            var dataObj;
+            $(document).ready(function(){
+                $.ajax({
+                    url:"https://reqres.in/api/users",
+                    type:"GET",
+                    success: function(obj){
+                       // console.log(obj.data);
+                       dataObj = obj.data;
+                        showData(dataObj);
+                    }
+                });
+                function showData(dataObj){
+                    //console.log(data);
+                    for(let prop of dataObj){
+                        //$("#img").attr("src",prop.avatar);
+                        var str = `<div style="float:left;"><div style='border:2px solid black;margin:10px;padding:5px;border-radius:20px; text-align:center;'><img src=${prop.avatar} style="border-radius:60px;padding-top:5px;"><br/><p style="color:red;font-weight:bold;text-decoration:underline;">${prop.first_name} ${prop.last_name} </p><p>${prop.email}</p></div></div>`;
+                        $("body").append(str);
+                    //console.log(i);
+                    // $("#div").html(str);
+                    // $("#div").html(`<img src=${dataObj[i].avatar}>`);
+                }
+                }
+            })
+        </script>
+    </body>
+</html>

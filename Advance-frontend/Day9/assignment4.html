@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Assignment-4</title>
+    </head>
+    <body>
+        <h1 align="center">Assignment-4</h1><hr/>
+        <table id="table" border="2">
+            <tr>
+                <th>Name</th>
+                <th>Price</th>
+                <th >Qty</th>
+            </tr>
+            <tr>
+                <td>Parle-g</td>
+                <td>10</td>
+                <td class="qty">1</td>
+            </tr>
+            <tr>
+                <td>Parle-g</td>
+                <td>10</td>
+                <td class="qty">0</td>
+            </tr>
+            <tr>
+                <td>Marie Gold</td>
+                <td>10</td>
+                <td class="qty">0</td>
+            </tr>
+            <tr>
+                <td>Parle-g</td>
+                <td>10</td>
+                <td class="qty">4</td>
+            </tr>
+            <tr>
+                <td>Parle-g</td>
+                <td>10</td>
+                <td class="qty">0</td>
+            </tr>
+            <tr>
+                <td>Parle-g</td>
+                <td>10</td>
+                <td class="qty">2</td>
+            </tr>
+            <tr>
+                <td>Parle-g</td>
+                <td>10</td>
+                <td class="qty">5</td>
+            </tr>
+        </table>
+        <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+        <script>
+            $(document).ready(function(){
+                $("#table tr:first").css("background-color","orange");
+                  $(".qty").each(function(){
+                   if($(this).text() == 0){
+                    $(this).parent().css("background-color","pink");
+                   }
+                   else{
+                    $(this).parent().css("background-color","green");
+                   }
+                  })
+                    
+                
+                $("#table tr:last").css("background-color","orange");            
+            })
+        </script>
+    </body>
+</html>

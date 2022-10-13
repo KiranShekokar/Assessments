@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Assignment-3</title>
+        <style>
+            td{
+                text-align: center;
+                height:100px;
+                width:100px;
+            }
+            img{
+                height:90px;
+                width:90px;
+            }
+        </style>
+    </head>
+    <body>
+        <h1 align="center">Image Gallery</h1><hr/>
+        <table id="table">
+            <tr>
+                <td><img  width="100" class="odd" height="100" style="border-radius:100px" src="images/img1.jpg"></td>
+                <td><img  width="100" class="even" height="100" style="border-radius:100px" src="images/img2.jpg"></td>
+                <td><img  width="100" class="odd" height="100" style="border-radius:100px" src="images/img3.jpg"></td>
+            </tr>
+            <tr>
+                <td><img  width="100" class="even" height="100" style="border-radius:100px" src="images/img4.jpg"></td>
+                <td><img  width="100" class="odd" height="100" style="border-radius:100px" src="images/img5.jpg"></td>
+                <td><img  width="100" class="even" height="100" style="border-radius:100px" src="images/img6.jpg"></td>
+            </tr>
+            <tr>
+                <td><img  width="100" class="odd" height="100" style="border-radius:100px" src="images/img1.jpg"></td>
+                <td><img  width="100" class="even" height="100" style="border-radius:100px" src="images/img2.jpg"></td>
+                <td><img  width="100" class="odd" height="100" style="border-radius:100px" src="images/img3.jpg"></td>
+            </tr>
+        </table>
+
+        <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+        <script>
+            $(document).ready(function(){
+                
+                $(".odd").hide();
+                setInterval(function(){
+                    $(".even").toggle(1000);
+                },1000);
+
+                setInterval(function(){
+                    $(".odd").toggle(1000);
+                },1000);
+                
+            })
+        </script>
+    </body>
+</html>
