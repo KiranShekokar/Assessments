@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Assignment-1</title>
+        <style>
+            .c1{
+                text-align: center;
+                border:2px solid black;
+                font-weight:bold;
+                padding:8px;
+                background-color:lightcoral;
+            }
+            .c2{
+                font-weight: bold;
+                border:3px solid black;
+                padding:10px;
+                border-radius:8px;
+                text-align: justify;
+                background-color:lightseagreen;
+            }
+            .c3{
+                background-color: black;
+                color:white;
+            }
+            .c6{
+                border:2px solid black;
+                font-style:italic;
+                padding:10px;
+                text-align: justify;
+                background-color:lightseagreen;
+            }
+            .c5{
+                text-align: center;
+                border:2px solid black;
+                font-style:italic;
+                padding:8px;
+                background-color:lightcoral;
+            }
+            .c4{
+                text-align: center;
+                border:2px solid black;
+                text-decoration: underline;
+                padding:8px;
+                background-color:lightcoral;
+            }
+            .c7{
+                border:2px solid black;
+                text-decoration: underline;
+                padding:10px;
+                text-align: justify;
+                background-color:lightseagreen;
+            }
+        </style>
+    </head>
+    <body>
+        <h3 class="h3">This is demo Of jQuery styles</h3>
+        <button type="button" id="bold">B</button>
+        <button type="button" id="underline">U</button>
+        <button type="button" id="italic">I</button>
+        <p>This is demo Of jQuery styles. This is demo Of jQuery styles.This is demo Of jQuery styles. This is demo Of jQuery styles.This is demo Of jQuery styles. This is demo Of jQuery styles.This is demo Of jQuery styles. This is demo Of jQuery styles.This is demo Of jQuery styles. This is demo Of jQuery styles.This is demo Of jQuery styles. This is demo Of jQuery styles.This is demo Of jQuery styles. This is demo Of jQuery styles.This is demo Of jQuery styles. This is demo Of jQuery styles.This is demo Of jQuery styles. This is demo Of jQuery styles.This is demo Of jQuery styles. This is demo Of jQuery styles.This is demo Of jQuery styles. This is demo Of jQuery styles.This is demo Of jQuery styles. This is demo Of jQuery styles.This is demo Of jQuery styles. This is demo Of jQuery styles.This is demo Of jQuery styles. This is demo Of jQuery styles.This is demo Of jQuery styles. This is demo Of jQuery styles.This is demo Of jQuery styles. This is demo Of jQuery styles.This is demo Of jQuery styles. This is demo Of jQuery styles.This is demo Of jQuery styles. This is demo Of jQuery styles.This is demo Of jQuery styles. This is demo Of jQuery styles.This is demo Of jQuery styles. This is demo Of jQuery styles. </p>
+    </body>
+
+    <script src="https://code.jquery.com/jquery-3.6.1.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("#bold").click(function(){
+                $("h3").toggleClass("c1");
+                $("p").toggleClass("c2");
+                $("#bold").toggleClass("c3");
+            })
+           $("#underline").click(function(){
+                $("h3").toggleClass("c4");
+                $("p").toggleClass("c7");
+                $("#underline").toggleClass("c3");
+            })
+            $("#italic").click(function(){
+                $("h3").toggleClass("c5");
+                $("p").toggleClass("c6");
+                $("#italic").toggleClass("c3");
+            })
+        })
+    </script>
+</html>
