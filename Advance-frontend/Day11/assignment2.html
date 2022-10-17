@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Assignment-2</title>
+    </head>
+    <body>
+        <h1 align="center">String Method Application</h1><hr/>
+        <button type="button" id="btn1">GET DATA</button><br/>
+        <table id="table1"></table>
+        
+
+        <script src="https://code.jquery.com/jquery-3.6.1.js"></script>
+
+        <script>
+            var customerObj = {cardnum : 1234567891234123, cname : "kirAn sHekOkar", ctype: "Visa", expmon:10 , expyear : 2023};
+            $(document).ready(function(){
+                $("#btn1").click(function(){
+                var card = customerObj.cardnum;
+                var name = customerObj.cname;
+
+                 //name to camelcase;
+               var d = name.split(" ");
+               var a = d[0].charAt(0).toUpperCase();
+               var f = d[0].slice(1).toLowerCase();
+               var s = d[1].charAt(0).toUpperCase();
+               var e = d[1].slice(1).toLowerCase(); 
+                var c = a+f+" "+s+e;
+                console.log(c);
+
+                var type = customerObj.ctype;
+                var month = customerObj.expmon;
+                var monthName = [{"monName":'Jan'},{"monName":'Feb'},{"monName":'Mar'},{"monName":'April'},{"monName":'May'},{"monName":'Jun'},{"monName":'Jul'},{"monName":'Aug'},{"monName":'Sep'},{"monName":'Oct'},{"monName":'Nov'},{"monName":'Dec'}];
+                var mName = monthName[month-1].monName;
+                console.log(mName);
+                var year = customerObj.expyear;
+               // alert(typeof(card));
+                let str = card.toString();
+                //let 
+                var row1= `<tr><td>Credit Card Number - </td> - <td> ****-****-****-${str.slice(12,16)}</td></tr>
+                <tr><td>Card Holder Name - </td> - <td>${c}</td></tr>
+                <tr><td>Card Type -</td> - <td>${type}</td></tr>
+                <tr><td>Expiry Date - </td> <td>${mName} ${year} </td></tr>`;
+                $("#table1").html(row1);
+
+               
+                })
+
+            })
+        </script>
+    </body>
+</html>

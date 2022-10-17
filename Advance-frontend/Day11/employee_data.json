@@ -1,0 +1,9 @@
+{
+    "employee_data":[
+        {"empno":12345,"ename":"Kiran","job":"Analyst","depno":12},
+        {"empno":12346,"ename":"Anu","job":"Manager","depno":11},
+        {"empno":12347,"ename":"Nikhil","job":"Consultant","depno":13},
+        {"empno":12348,"ename":"Urvashi","job":"SD","depno":15},
+        {"empno":12349,"ename":"Shreyas","job":"Senior Analyst","depno":18}
+    ]
+}

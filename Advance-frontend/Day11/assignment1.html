@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Assignment-1</title>
+    </head>
+    <body>
+        <h1 align="center">Validations using Jquery</h1><hr/><hr/>
+        <input type="text" placeholder="Enter Name" id="name" name="name"><br/><br/>
+        <input type="text" placeholder="Enter Contact Number" id="numb" name="numb"><br/><br/>
+        <input type="text" placeholder="Enter Vehicle Number" id="veh" name="veh"><br/><br/>
+        <input type="text" placeholder="Enter City" id="city" name="city"><br/><br/>
+
+
+        <script src="https://code.jquery.com/jquery-3.6.1.js"></script>
+
+        <script>
+            $(document).ready(function(){
+                $("#numb").keyup(function(){
+                    $("#span3").remove();
+                    var inputNumVal = $(this).val();
+                    var numericReg = /^\d*[0-9](|.\d*[0-9]|,\d*[0-9])?$/;
+                    if(numericReg.test(inputNumVal)==false && inputNumVal.length>0){
+                        $(this).after('<span  id="span3">Numeric values only.</span>');
+                    }
+                    if(inputNumVal.length>10){
+                        $(this).after('<span  id="span3">Limit exceed(Only 10 digits required)</span>');
+                    }
+                })
+
+                $("#name").keyup(function(){
+                    $("#span1").remove();
+                    var inputNameVal = $(this).val();
+                    var charReg = /^[a-zA-Z][a-zA-Z\s]+$/;
+                    if(charReg.test(inputNameVal)==false && inputNameVal.length>0){
+                        $(this).after('<span  id="span1">Character are only accepted.</span>');
+                    }
+                    if(inputNameVal.length>10){
+                        $(this).after('<span  id="span1">Limit exceed(Only 10 characters required)</span>');
+                    }
+                })
+
+                $("#veh").keyup(function(){
+                    $("#span3").remove();
+                    var inpVehValue = $(this).val();
+                    var vehReg = /^[A-Z]{2}[0-9]{2}[A-Z]{2}[0-9]{4}$/;
+                    if(vehReg.test(inpVehValue)==false && inpVehValue.length>0){
+                        $(this).after('<span  id="span3">Incorrect value.</span>');
+                    }
+                })
+
+                $("#city").keyup(function(){
+                    $("#span4").remove();
+                    var inpCityValue = $(this).val();
+                    var cityReg = /^[A-Z]+$/;
+                    if(cityReg.test(inpCityValue)==false && inpCityValue.length>0){
+                        $(this).after('<span  id="span4">Only Uppercase accepted</span>');
+                    }
+                })
+            })
+        </script>
+    </body>
+</html>
