@@ -30,7 +30,7 @@
 
         <script>
             $(document).ready(function(){
-                var inputNumVal;
+              
                 $("#show").click(function(){
                    
                     $.ajax({
@@ -50,30 +50,27 @@
                     }
                 })
 
-               $("#store").click(function(){
-                   var empnum = $("#enum").val();
-                   var empname = $("#ename").val();
-                   var empjob = $("#job").val();
-                  var depnum = $("#depnum").val();
-
-                /*   $("#depnum").keyup(function(){
+                $("#depnum").keyup(function(){
+                   // alert("hi");
                     $("#span1").remove();
                     var inputNumVal = $(this).val();
-                    console.log(inputNumVal);
+                   // console.log(inputNumVal);
                     var numericReg = /^\d*[0-9](|.\d*[0-9]|,\d*[0-9])?$/;
                     if(numericReg.test(inputNumVal)==false && inputNumVal.length>0){
                         $(this).after('<span  id="span1">Numeric values only.</span>');
                     }
                     if(inputNumVal.length>2){
-                        $(this).after('<span  id="span3">Limit exceed(Only 2 digits required)</span>');
+                        $(this).after('<span  id="span1">Limit exceed(Only 2 digits required)</span>');
                     }   
-                })  */
+                })  
+
+               $("#store").click(function(){
 
                 var emplObj = {};
-                emplObj.empno = empnum;
-                emplObj.ename = empname;
-                emplObj.job = empjob;
-               // emplObj.depno = depnum;
+                emplObj.empno = $("#enum").val();
+                emplObj.ename = $("#ename").val();
+                emplObj.job = $("#job").val();
+                emplObj.depno = $("#depnum").val();
                  
                 $.ajax({
                     url:"http://localhost:3000/employee_data",
