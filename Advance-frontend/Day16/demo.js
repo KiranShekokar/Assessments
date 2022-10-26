@@ -1,0 +1,5 @@
+var obj ={sid:1025};
+obj.sId = 1026;
+obj.siD = 1027;
+obj.SID = 1028;
+console.log(obj);
