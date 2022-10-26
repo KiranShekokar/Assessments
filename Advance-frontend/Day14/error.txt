@@ -1,0 +1,6 @@
+fatal: unable to access 'https://github.com/KiranShekokar/demoGIT.git/': error setting certificate verify locations:  CAfile: C:/Users/ksopanshekokar/Git/mingw64/ssl/certs/ca-bundle.crt CApath: none
+
+error while pushing files into remote depository 
+
+solution : git config --global http.sslverify "false" 
+run the above command to make the security verfication as false.

@@ -1,0 +1,2 @@
+1) Props in react (props  == properties) : argument passed into react components , passed via HTML Elements
+-> they are function argument in js & attributes in html.

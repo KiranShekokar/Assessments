@@ -1,0 +1,51 @@
+ksopanshekokar@USHYDKSOPANSHE6 MINGW64 /c/NewGit (test)
+$ touch newtest.js
+
+ksopanshekokar@USHYDKSOPANSHE6 MINGW64 /c/NewGit (test)
+$ git add newtest.js
+
+ksopanshekokar@USHYDKSOPANSHE6 MINGW64 /c/NewGit (test)
+$ git commit -m "newtest.js added in new branch dev at 5:37pm"
+[test 5bd853e] newtest.js added in new branch dev at 5:37pm
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 newtest.js
+
+ksopanshekokar@USHYDKSOPANSHE6 MINGW64 /c/NewGit (test)
+$ git checkout master
+Switched to branch 'master'
+
+ksopanshekokar@USHYDKSOPANSHE6 MINGW64 /c/NewGit (master)
+$ git merge master test
+Updating 57c40b9..5bd853e
+Fast-forward
+ newtest.js | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 newtest.js
+
+ksopanshekokar@USHYDKSOPANSHE6 MINGW64 /c/NewGit (master)
+$ dir master
+dir: cannot access 'master': No such file or directory
+
+ksopanshekokar@USHYDKSOPANSHE6 MINGW64 /c/NewGit (master)
+$ dir
+deps.component.html  deps.component.js  deps.component.ts  emp.html  emp.js  emp.ts  newtest.js
+
+ksopanshekokar@USHYDKSOPANSHE6 MINGW64 /c/NewGit (master)
+$ git checkout test
+Switched to branch 'test'
+
+ksopanshekokar@USHYDKSOPANSHE6 MINGW64 /c/NewGit (test)
+$ git push origin test
+Enumerating objects: 3, done.
+Counting objects: 100% (3/3), done.
+Delta compression using up to 16 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (2/2), 290 bytes | 290.00 KiB/s, done.
+Total 2 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+remote:
+remote: Create a pull request for 'test' on GitHub by visiting:
+remote:      https://github.com/KiranShekokar/demoGIT/pull/new/test
+remote:
+To https://github.com/KiranShekokar/demoGIT.git
+ * [new branch]      test -> test
