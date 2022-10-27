@@ -55,7 +55,12 @@ export class ProductComponent implements OnInit {
   }
  
   resetProduct():void{
-      this.prodArray = [];
+      this.proid=0;
+      this.proname="";
+      this.price =0;
+      this.category ="";
+      this.qty=0;
+     // this.prodArray = [];
   }
 
   constructor() { }
