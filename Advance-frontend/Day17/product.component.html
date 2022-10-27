@@ -1,0 +1,23 @@
+<h1>CRUD Operation</h1><hr/>
+<div style="padding:10px;">
+    ID : <input type="number" [(ngModel)]="proid"><br/><br/>
+    NAME : <input type="text" [(ngModel)]="proname"><br/><br/>
+    Price : <input type="number" [(ngModel)]="price"><br/><br/>
+    Category : <input type="text" [(ngModel)]="category"><br/><br/>
+    Quantity : <input type="number" [(ngModel)]="qty"><br/><br/>
+
+    <input type="button" value="Get Product" (click)="getProduct()">
+    <input type="button" value="Add Product" (click)="addProduct()">
+    <input type="button" value="Update Product" (click)="updateProduct(proid)">
+    <input type="button" value="Reset" (click)="resetProduct()">
+<br/>
+<div *ngFor="let item of prodArray" style="float:left;background-color:bisque;text-align: center;padding:8px; margin:5px;">
+   <span style="color:red;font-weight:bold;">Product ID : {{item.proid}}<br/></span> 
+   <span style="color:green;font-weight:bold;">Product Name : {{item.proname}}<br/></span>
+   <span style="color:blue;font-weight:bold;">Price : Rs.{{item.price}}<br/></span>
+   <span style="color:brown;font-weight:bold;">Category : {{item.category}}<br/></span>
+   <span style="color:violet;font-weight:bold;">Quantity : {{item.qty}}<br/></span>
+    <a href="javascript:void(0);" (click)="selectProd( item.proid )">Select</a> | <a href="javascript:void(0);" (click)="deleteProd( item.proid )">Delete</a>
+    </div>
+</div>
+
