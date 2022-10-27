@@ -60,7 +60,7 @@ export class ProductComponent implements OnInit {
       this.price =0;
       this.category ="";
       this.qty=0;
-     // this.prodArray = [];
+      this.prodArray = [];
   }
 
   constructor() { }
