@@ -1,0 +1,17 @@
+
+<h1>Simple Interest Calculator</h1><hr/>
+
+Principle Amount : <input type="number" [(ngModel)]="pamount" ><br/><br/>
+Rate % Per Year : <input type="number" [(ngModel)] ="rate"><br/><br/>
+Time Period(In Year) : <select [(ngModel)]="time">
+    <option value="1">1</option>
+    <option value="2">2</option>
+    <option value="3">3</option>
+    <option value="4">4</option>
+    <option value="5">5</option>
+</select><br/><br/>
+
+
+<input type="button" (click)="calculate()" value="Calculate Interest">
+
+<p>The Simple Interes is Rs.{{si}}</p>
