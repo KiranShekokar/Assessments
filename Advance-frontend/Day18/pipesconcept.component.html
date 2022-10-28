@@ -1,0 +1,8 @@
+<h1>PIPES CONCEPT</h1><hr/>
+<input type="button" (click)="loadMore()" value="Load More" [disabled]="buttontype">
+<br/><br/>
+    <div *ngFor="let item of userArr | slice : min : max" style="text-align:center;margin:3px;float:left;border:1px solid red;padding:5px;background-color: skyblue;">
+         <p style="margin:0px;">{{item.uname}}</p>
+         <p style="margin:0px;">{{item.uage}}</p>
+         <p style="margin:0px;">{{item.ucontact}}</p>
+    </div>
