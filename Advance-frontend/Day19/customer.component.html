@@ -1,0 +1,16 @@
+<h1>Customer using URL</h1>
+<input type="button" (click)="getData()" value="Get Customer Data"><br/><br/>
+
+<!--<p>{{customerdata | json}}</p> -->
+<table border="2">
+    <tr>
+        <th>Name</th>
+        <th>City</th>
+        <th>Country</th>
+    </tr>
+    <tr *ngFor="let item of customerdata">
+        <td>{{item.Name}}</td>
+        <td>{{item.City}}</td>
+        <td>{{item.Country}}</td>
+    </tr>
+</table>
