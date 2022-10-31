@@ -1,0 +1,29 @@
+<h1>Custom Pipes Concept</h1>
+<hr/>
+<div style="float:left;">
+<table border="2" [cellPadding]="5">
+    <tr>
+        <th>Sno.</th>
+        <th>Employee Name</th>
+        <th>Performance</th>
+    </tr>
+    <tr *ngFor=" let item of empArr ">
+        <td>{{item.sno}}</td>
+        <td>{{item.ename}}</td>
+        <td>{{item.performace}}</td>
+    </tr>
+</table>
+
+<table border="2" [cellPadding]="5">
+    <tr>
+        <th>Sno.</th>
+        <th>Employee Name</th>
+        <th>Performance</th>
+    </tr>
+    <tr *ngFor=" let item of empArr ">
+        <td>{{item.sno}}</td>
+        <td>{{item.ename}}</td>
+        <td>{{item.performace | grades}}</td>
+    </tr>
+</table>
+</div>
