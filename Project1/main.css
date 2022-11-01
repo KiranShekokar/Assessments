@@ -1,0 +1,75 @@
+.div1
+            {
+                width:auto;
+            }
+            #dd1
+            {
+                background-color: white;
+            }
+            #dd1:hover
+            {
+                background-color: black;
+            }
+            a
+            {
+                color:black;
+            }
+            a:hover
+            {
+                text-decoration: none;
+                color: wheat;
+
+            }
+            .heading1
+            {
+                color:rgb(13, 13, 65);
+            }
+            a:hover .heading1
+            {
+                color:orange;
+            }
+            .container
+            {
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+            }
+            @media only screen and(min-width:450px)
+            {
+                .g1
+                {
+                    grid-template-columns: 47.5% 47.5%;
+                    grid-column-gap : 5%;
+                    grid-row-gap: 40px;
+                }
+        }
+        ul
+        {
+            list-style-type: none;
+        }
+        .ll1
+        {
+            text-decoration: none;
+            color: black;
+            font-weight: bold;
+        }
+        .foot
+        {
+            background-color: rgb(235, 236, 236);
+        }
+        .dd2
+        {
+            text-align: center;
+        }
+        .tt
+        {
+            position: relative;
+            left: -100px;
+        }
+        .dropdown1{
+            position:relative;
+        }
+        .nav-item{
+            color:black;
+            padding:5px;
+        }

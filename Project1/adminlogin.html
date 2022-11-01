@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Admin | Login</title>
+        <meta charset="UTF-8">
+        <link  href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css"  rel="stylesheet"  />
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+        <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+        <script  src="	https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"> </script>
+        <style>
+            body{
+                width:100%;
+                background-image: url('https://images.unsplash.com/photo-1432821596592-e2c18b78144f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8bG9naW58ZW58MHx8MHx8&w=1000&q=80');
+            }
+            .ll1 a{
+    color:black;
+    text-decoration: none;
+   }
+   .ll1{
+       color:black;
+   }
+   .ll1 a:hover{
+       color:orange;
+   }
+        </style>
+    </head>
+    <body>
+        <div>
+            <nav class="navbar bg-dark navbar-expand-sm navbar-light">
+                <a href="homepage.html" class="text-light navbar-brand p-2 bg-light"><img src="Fixity_Logo.png" height="50" width="60"></a>
+                <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#content1">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+    
+                <div class="collapse navbar-collapse" id="content1">
+                    <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link text-light" href="aboutus.html">About Us</a></li>
+                   
+                    <li class="nav-item dropdown">
+                        <a class="nav-link text-light dropdown-toggle" href="#" id="dropdown1" data-bs-toggle="dropdown">Login</a>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item text-center" href="adminlogin.html">Admin</a><hr/>
+                            <a class="dropdown-item text-center" href="guestlogin.html">Guest</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link text-light dropdown-toggle" href="#" id="dropdown1" data-bs-toggle="dropdown">Services</a>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item text-center" href="services_digitalMarket.html"><span>Digital Marketing</span></a><hr/>
+                            <a class="dropdown-item text-center" href="services_itStaffing.html">IT Staffing</a>
+                        </div>
+                    </li>
+                    <li class="nav-item"><a class="nav-link text-light" href="careers.html">Career</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+
+     <section>    
+      <div class="p-5">
+       
+        <form action="#" method="post" autocomplete="off">
+          <div class="border border-primary rounded col-5 container bg-light style" >
+            <h3 id="incorrect" align="center"></h3>
+            <div class="text-center mt-4"><i class="fas fa-user-alt fa-3x mb-3"></i></i></div>
+            <div class="form-floating mb-3">
+             <input type="email" class="form-control" name="email" id="email" placeholder="Email ID" autofocus>
+             <label>Email ID</label>
+            </div>
+            <div class="form-floating mb-3">
+                <input type="password" class="form-control" name="pswd" id="pswd" placeholder="Password" required>
+                <label>Password</label>
+               </div>
+               <button type="button" class="btn btn-success text-uppercase mb-4 container" id="signin" onclick="validation()">sign-in</button>
+          </div>
+        </form>
+      </div>
+     </section>
+
+     <footer>
+        <div class="container-fluid bg-secondary text-center" style="display:flex;justify-content:center;flex-wrap:wrap;">
+            <div class="p-3 ">
+                <img src="Fixity_Logo.png" height="80%" width="80%"/>
+            </div>
+    
+            <div class="p-5 ">
+                <h3 align="left" class="fw-bold heading1 text-dark">Quick Links</h3>
+                    <ul type="none" class="text-light text-start p-1">
+                        <li class=" ll1"><a href="homepage.html">Home</a></li>
+                        <li class=" ll1"><a href="aboutus.html">About Us</a></li>
+                        <li class=" ll1"><a href="contactus.html">Contact Us</a></li>
+                    </ul>
+            </div>
+            <div  class="p-5">
+                <h3 align="left" class="fw-bold heading1 text-dark">Services</h3>
+                <ul type="none" class="text-light text-start p-1">
+                    <li class=" ll1"><a href="services_itStaffing.html">IT Staffing</a></li>
+                    <li class=" ll1"><a href="services_digitalMarket.html">Digital Marketing</a></li>
+                </ul>
+            </div>
+            <div  class="p-5">
+                <h3 align="left" class="fw-bold heading1 text-dark">Contact Us</h3>
+                <ul type="none" class="text-light p-1">
+                    <li class=" ll1"><a href="https://www.facebook.com/"> <i class="bi bi-facebook"></i></a></li>
+                    <li class=" ll1"><a href="https://www.twitter.com/">  <i class="bi bi-twitter"></i> </a></li>
+                        <li class=" ll1"><a href="https://www.youtube.com"> <i class="bi bi-youtube"></i></a></li>
+    </ul>
+     </div>
+    </div>
+     </footer>
+
+    <script>
+        function validation(){
+            //alert("hy");
+            var emailtxtObj = document.getElementById("email");
+            var pswdtxtObj = document.getElementById("pswd");
+            var msgObj = document.getElementById("incorrect");
+
+        if(emailtxtObj.value == "kiran@gmail.com" && pswdtxtObj.value == "12345"){
+           // alert("hi");
+           window.location.href = "homepage.html";
+            return;
+        }
+
+          msgObj.innerHTML="Incorrect Credentials! Try again &#128542"
+
+        }
+    </script>
+    </body>
+</html>
