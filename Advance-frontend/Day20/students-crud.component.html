@@ -1,0 +1,31 @@
+<h1>CRUD OPERATIONS Using SERVICE</h1>
+
+<input type="text" placeholder="Student Name" [(ngModel)]="name"><br/><br/>
+<input type="text" placeholder="City" [(ngModel)]="city"><br/><br/>
+<input type="email" placeholder="Student Email" [(ngModel)]="email"><br/><br/>
+<input type="number" placeholder="Student Age" [(ngModel)]="age">
+<br/><br/>
+<input type="button" value="Get Students" (click)="getStudent()">
+<input type="button" value="Add Students" (click)="addStudent()">
+<input type="button" value="Update Students" (click)="updateStudent(studentId)">
+<input type="button" value="Clear Fields" (click)="clearStudent()">
+
+<br/><br/><hr/>
+<table border="2">
+    <tr>
+        <th>Student ID</th>
+        <th>Student Name</th>
+        <th>Student Email</th>
+        <th>Student City</th>
+        <th>Student Age</th>
+        <th>Action</th>
+    </tr>
+    <tr *ngFor="let item of studentArr">
+        <td>{{item.studentId}}</td>
+        <td>{{item.name}}</td>
+        <td>{{item.email}}</td>
+        <td>{{item.city}}</td>
+        <td>{{item.age}}</td>
+        <td><a href="javascript:void(0)" (click)="selectStudent(item.studentId)">SELECT</a>| <a href="javascript:void(0)" (click)="deleteStudent(item.studentId)">DELETE</a></td>
+    </tr>
+</table>
