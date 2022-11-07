@@ -1,0 +1,74 @@
+{
+    "faculty":[
+        {
+            "facultyId" : 101,
+            "fname" : "Ramesh Salunke",
+            "Depno" : 10,
+            "imgurl": "https://i2.wp.com/www.torontophotographerz.com/wp-content/uploads/2017/06/Business-portrait-19.jpg?fit=720%2C1080&ssl=1",
+            "specialisation" : "Geography"
+        },
+        {
+            "facultyId" : 102,
+            "fname" : " Anu Shekhawat",
+            "Depno" : 20,
+            "imgurl": "https://imageio.forbes.com/specials-images/imageserve/609946db7c398a0de6c94893/0x0.jpg?format=jpg&width=1200",
+            "specialisation" : "Sanskrit"
+        },
+        {
+            "facultyId" : 103,
+            "fname" : "Kiran Kirloskar",
+            "Depno" : 30,
+            "imgurl": "https://e9g2x6t2.rocketcdn.me/wp-content/uploads/2020/11/Professional-Headshot-Poses-Blog-Post.jpg",
+            "specialisation" : "Pschology"
+        },
+        {
+            "facultyId" : 104,
+            "fname" : "Mahesh Sharma",
+            "Depno" : 10,
+            "imgurl": "https://eyemediastudios.co.uk/wp-content/uploads/2021/02/photography-8.jpg",
+            "specialisation" : "Hindi"
+        },
+        {
+            "facultyId" : 105,
+            "fname" : "Rahul Srivastava",
+            "Depno" : 30,
+            "imgurl": "https://media.istockphoto.com/photos/studio-waist-up-portrait-of-a-beautiful-businesswoman-with-crossed-picture-id1180926773?k=20&m=1180926773&s=612x612&w=0&h=GDpHprMlxwBoiBGgVAIDEQNfpMyHhy3-pu6pOw8H650=",
+            "specialisation" : "Biology"
+        },
+        {
+            "facultyId" : 106,
+            "fname" : "Karishma Saahu",
+            "Depno" : 30,
+            "imgurl": "https://images.squarespace-cdn.com/content/v1/5a6661b82aeba5fa3982e344/1525798279499-UHN62V0430SOHXJDTBV7/contemporary+photography+professional+pictures+1.jpg?format=1500w",
+            "specialisation" : "Physics"
+        },
+        {
+            "facultyId" : 107,
+            "fname" : "Nikhil Singh",
+            "Depno" : 20,
+            "imgurl": "https://i2.wp.com/www.torontophotographerz.com/wp-content/uploads/2017/06/Business-portrait-19.jpg?fit=720%2C1080&ssl=1",
+            "specialisation" : "Chemistry"
+        },
+        {
+            "facultyId" : 108,
+            "fname" : "Riya Jain",
+            "Depno" : 20,
+            "imgurl": "https://imageio.forbes.com/specials-images/imageserve/609946db7c398a0de6c94893/0x0.jpg?format=jpg&width=1200",
+            "specialisation" : "Maths"
+        },
+        {
+            "facultyId" : 109,
+            "fname" : "Uma Maheshwari",
+            "Depno" : 30,
+            "imgurl": "https://e9g2x6t2.rocketcdn.me/wp-content/uploads/2020/11/Professional-Headshot-Poses-Blog-Post.jpg",
+            "specialisation" : "Polity"
+        },
+        {
+            "facultyId" : 110,
+            "fname" : "Sravthi Kalluri",
+            "Depno" : 20,
+            "imgurl": "https://eyemediastudios.co.uk/wp-content/uploads/2021/02/photography-8.jpg",
+            "specialisation" : "History"
+        }
+    ]
+}
